@@ -10,7 +10,7 @@ body {
 
 /*Шапка страницы*/
 .header {
-   padding: 124px 0 36px;
+   padding: 124px 0 20px;
 }
 
 .header__wrapper {
@@ -19,7 +19,7 @@ body {
 	margin:0 auto;
 }
 
-.header__tittle {
+.header__title {
    text-transform: uppercase;
    font-size: 35.5px;
    font-weight: bold;
@@ -54,17 +54,150 @@ body {
    color:#333;
    font-size: 18px;
    line-height: 22px;
+   border-bottom: 1px transparent solid;
 }
 
 .nav-list__link:hover {
-   border-bottom: 1px #D90000 solid;
+   border-color: #D90000;
 }
 /*--------------------*/
 
 /*Основное содержание главной страницы*/
 .home-main {
+   margin-top:16px;
 
 }
+/*Блок верхнего слайдера*/
+/* стили основного контейнера слайдера */
+.slider {
+   position: relative;
+   overflow: hidden;
+   max-width: 1170px;
+   margin:0 auto;
+   
+ }
+
+ /* стили для обёртки, в которой заключены слайды */
+ .slider-wrapper {
+   position: relative;
+   overflow: hidden;
+   padding-bottom: 40px;  
+ }
+
+ /* стили для контейнера слайдов */
+ .slider__items {
+   display: flex;
+   transition: transform 0.6s ease;
+ }
+
+ .slider-item{
+   display:grid;
+   grid-template-columns: auto auto;
+   grid-template-rows: auto auto;
+   column-gap: 17px;
+   row-gap: 8px;
+   flex: 0 0 100%;
+   max-width: 100%;
+}
+
+.slider-item__element1 {
+   position:relative;
+   grid-column: 1/2;
+   grid-row: 1/3;
+}
+
+.slider-item__element2 {
+   position:relative;
+   grid-column: 2/3;
+   grid-row: 1/2;
+}
+.slider-item__element3 {
+   position:relative;
+   grid-column: 2/3;
+   grid-row: 2/3;
+}
+.big-element-title{
+   position: absolute;
+   top:248px;
+   left:60px;
+   font-size: 36px;
+   color:#fff;
+   font-weight: 400;
+   line-height: 44px;
+   width:620px;
+}
+.element-title{
+   position: absolute;
+   top:68px;
+   left:30px;
+   font-size: 24px;
+   color:#fff;
+   font-weight: 400;
+   line-height: 30px;
+   width:240px;
+}
+
+.element-button {
+   width:200px;
+   height:50px;
+   font-size: 16px;
+   color:#fff;
+   line-height: 20px;
+   padding:14px 5px 16px;
+   box-sizing: border-box;
+   border: 1px #fff solid;
+   border-radius: 1px;
+   text-transform: uppercase;
+   text-align: center;
+}
+
+.big-element {
+   position: absolute;
+   left:60px;
+   bottom:60px;
+   background-color: rgba(0,0,0,0.3);
+}
+.small-element {
+   position: absolute;
+   left:30px;
+   bottom:30px;
+   background-color: rgba(0,0,0,0.3);
+}
+
+ /* стили для индикаторов */
+ .slider__indicators {
+   position: absolute;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   z-index: 15;
+   display: flex;
+   justify-content: center;
+   padding-left: 0;
+   margin-right: 15%;
+   margin-left: 15%;
+   list-style: none;
+   margin-top: 0;
+   margin-bottom: 0;
+ }
+
+ .slider__indicators li {
+   width:13px;
+   height:13px;
+   background-color: #fff;
+   border:1px #d8d8d8 solid;
+   border-radius:50%;  
+   margin-right: 7px;
+   margin-left: 7px;
+ }
+
+ .slider__indicators li.active {
+   background-color: #4f4f4f;
+   border-color: #4f4f4f;
+ }
+
+
+
 /*--------------------*/
 
 /*Подвал страницы*/
