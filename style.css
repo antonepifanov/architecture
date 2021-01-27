@@ -74,7 +74,7 @@ body {
    overflow: hidden;
    max-width: 1170px;
    margin:0 auto;
-   
+   box-sizing: border-box;
  }
 
  /* стили для обёртки, в которой заключены слайды */
@@ -116,6 +116,9 @@ body {
    grid-column: 2/3;
    grid-row: 2/3;
 }
+
+
+
 .big-element-title{
    position: absolute;
    top:248px;
@@ -195,9 +198,6 @@ body {
    background-color: #4f4f4f;
    border-color: #4f4f4f;
  }
-
-
-
 /*--------------------*/
 
 /*Подвал страницы*/
@@ -218,7 +218,7 @@ body {
    .header {
       padding: 15px 0 36px;
    }
-   .header__tittle {
+   .header__title {
       font-size: 20px;
    }
    .header__link span{
