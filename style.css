@@ -111,14 +111,32 @@ body {
    grid-column: 2/3;
    grid-row: 1/2;
 }
+
 .slider-item__element3 {
    position:relative;
    grid-column: 2/3;
    grid-row: 2/3;
 }
 
+.slider-item__element1 img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
 
+.slider-item__element2 img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
 
+.slider-item__element3 img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+/*Стили для заголовков и кнопок внутри верхнего слайдера*/
 .big-element-title{
    position: absolute;
    top:248px;
@@ -129,6 +147,7 @@ body {
    line-height: 44px;
    width:620px;
 }
+
 .element-title{
    position: absolute;
    top:68px;
@@ -145,8 +164,8 @@ body {
    height:50px;
    font-size: 16px;
    color:#fff;
-   line-height: 20px;
-   padding:14px 5px 16px;
+   line-height: normal;
+   padding:15px 5px;
    box-sizing: border-box;
    border: 1px #fff solid;
    border-radius: 1px;
@@ -279,5 +298,70 @@ body {
    .header__nav-toggle.active span:after {
       transform: rotate(-45deg);
    }
+   .slider-item{      
+      column-gap: 5px; 
+      row-gap: 5px;     
+   }
+   .big-element-title{ 
+      line-height: normal;         
+      width:auto;
+      font-size: 26px;
+      top: 15%;
+      left: 10px;
+   }
+   .element-title{   
+      line-height: normal;   
+      width:auto;
+      font-size: 18px;
+      top: 15%;
+      left: 10px;
+   }
+   .element-button {
+      width:150px;
+   }      
+   .big-element {      
+      bottom:20px;  
+      left: 10px;    
+   }
+   .small-element {      
+      bottom:20px;     
+      left: 10px; 
+   }   
 }
+
+@media only screen and (max-width: 450px){
+   .slider-item{
+      display:flex;
+      flex-wrap: wrap;
+      flex: 0 0 100%;
+      max-width: 100%;
+   }
+   .slider-item__element2,.slider-item__element3{
+      flex:45% 1 1;
+   }
+   .big-element-title{          
+      line-height: normal;
+      font-size: 20px;     
+   }
+   .element-title{      
+      line-height: normal;
+      font-size: 14px;
+      top: 5%;     
+   }      
+   .big-element {      
+      bottom:20px;  
+      left: 10px;    
+   }
+   .small-element {      
+      bottom:20px;     
+      left: 10px; 
+   }   
+   .element-button {
+      width:100px;
+      height:20px;
+      font-size: 8px;     
+      line-height: normal;
+      padding:5px;     
+   }   
+}   
 /*--------------------*/
